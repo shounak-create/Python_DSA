@@ -21,6 +21,16 @@ class LinkedList:
 
         temp.next = new_node
 
+    def insertion_at_start(self,data):
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+            return
+
+        new_node.next = self.head
+        self.head = new_node
+
     def display_list(self):
         if self.head is None:
             return "no elements in the list"
@@ -46,5 +56,10 @@ l1 = LinkedList()
 l1.add_list(23)
 l1.add_list(24)
 l1.add_list(25)
+print("Counting")
 l1.Count_list()
+print("1st display")
+l1.display_list()
+l1.insertion_at_start(1)
+print("2nd Display")
 l1.display_list()
