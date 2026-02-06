@@ -51,15 +51,32 @@ class LinkedList:
             temp = temp.next
         print(count)
 
+    def reverse_list(self):
+        temp = self.head
+        new = self.head.next
+        new2 = self.head.next.next
+
+        while new2.next is not None:
+            new.next = temp
+            temp = new
+            new = new2
+            new2.next = new2.next
+        self.head = new2
+
 
 l1 = LinkedList()
 l1.add_list(23)
 l1.add_list(24)
 l1.add_list(25)
+l1.add_list(26)
+l1.add_list(27)
 print("Counting")
 l1.Count_list()
 print("1st display")
 l1.display_list()
 l1.insertion_at_start(1)
 print("2nd Display")
+l1.display_list()
+print("reversing")
+l1.reverse_list()
 l1.display_list()
