@@ -1,3 +1,7 @@
+# Problem: Find Maximum in Array
+# Approach: Linear scan
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 input = [3, 7, 2, 9, 4]
 greatest = input[0]
 for i in input:
